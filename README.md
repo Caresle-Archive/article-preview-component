@@ -39,8 +39,8 @@ Desktop
 
 ### Links
 
-- Solution URL: [Solution]()
-- Live Site URL: [Github pages]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/article-preview-component-_ulR3eTK6)
+- Live Site URL: [Github pages](https://caresle.github.io/article-preview-component/)
 
 ## My process
 

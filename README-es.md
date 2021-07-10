@@ -36,8 +36,8 @@ Desktop
 
 ### Links
 
-- URL para la solución: [Solution page]()
-- URL para probar el sitio: [Github pages]()
+- URL para la solución: [Solution page](https://www.frontendmentor.io/solutions/article-preview-component-_ulR3eTK6)
+- URL para probar el sitio: [Github pages](https://caresle.github.io/article-preview-component/)
 
 ## Mi proceso
 
