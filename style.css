@@ -1,0 +1,208 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: #fff;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-size: 13px;
+  background-color: var(--grayish-blue);
+}
+
+main {
+  background-color: var(--white);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 240px 141px 142px 64px;
+  grid-template-areas: "img" "title" "para" "share";
+  box-shadow: var(--very-dark-grayish-blue) 0px 7px 29px 0px;
+}
+
+h2, #personal-info > strong {
+  color: var(--very-dark-grayish-blue);
+}
+
+h2, p, #share-info, #share-content {
+  padding: 8px;
+}
+
+h2 {
+  grid-area: title;
+  font-weight: 700;
+  width: 300px;
+  justify-self: center;
+}
+
+p {
+  grid-area: para;
+  margin: 0 auto;
+  color: var(--desaturated-dark-blue);
+  width: 310px;
+  font-size: 1rem;
+}
+
+main > img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.share-enable > #info-share > #profile-picture, .share-enable > #info-share > #personal-info {
+  display: none;
+}
+
+.share-enable {
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 0 0 12px 12px;
+}
+
+.share-disable > #share-content {
+  display: none;
+}
+
+#share-content {
+  color: var(--desaturated-dark-blue);
+  display: flex;
+  align-items: center;
+}
+
+#share-content > img {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#share-content > span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+#share-info {
+  grid-area: share;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#info-share {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#info-share > .icon-background {
+  align-items: center;
+}
+
+#personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#personal-info > span {
+  color: var(--grayish-blue);
+}
+
+#profile-picture {
+  border-radius: 50%;
+}
+
+.icon-background {
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.share-enable > .icon-background {
+  background-color: var(--desaturated-dark-blue);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-content {
+  width: 24px;
+  height: 24px;
+}
+
+.icon:hover, .icon-content:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    max-width: 700px;
+    height: 360px;
+    margin: 5rem auto;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(2, 142px) 76px;
+    grid-template-areas: "img title" "img para" "img share";
+  }
+
+  main > img {
+    border-radius: 12px 0 0 12px;
+  }
+
+  #share-info {
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(2, 38px);
+    grid-template-areas: "share-content" "links";
+  }
+
+  .share-enable {
+    background-color: transparent;
+  }
+
+  #share-content {
+    grid-area: links;
+    border-radius: 8px;
+    position: relative;
+    width: 200px;
+    top: -80px;
+    left: 140px;
+    background-color: var(--very-dark-grayish-blue);
+    padding: 8px;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--very-dark-grayish-blue);
+    position: relative;
+    top: 24px;
+    left: -75px;
+  }
+
+  #info-share {
+    grid-area: share-content;
+    display: flex;
+  }
+
+  #icon-button {
+    position: static;
+  }
+
+  .share-enable > #info-share > #profile-picture, .share-enable > #info-share > #personal-info {
+    display: inherit;
+  }
+}
